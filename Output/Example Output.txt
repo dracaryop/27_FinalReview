@@ -1,0 +1,126 @@
+$ python SearchEngine.py 
+----------------------------------------------------------------------
+|    II Search Engine                                            |
+|                                                                    |
+|    [0] Exit                                                        |
+|    [1] Build Index                                                 |
+|    [2] Search Documents                                            |
+----------------------------------------------------------------------
+Please select an option: 1
+----------------------------------------------------------------------
+Would you like to import the index from disk? (y/n) n
+
+Seed URL: http://techtree.iiitd.edu.in/viewDescription/filename?=CSE121
+Page limit: 60
+Stop words: Input/stopwords.txt
+Thesaurus: Input/thesaurus.csv
+
+Beginning crawling...
+
+
+1. Visiting: /~CSE121/ (course discription- IIITD)
+2. Visiting: /~CSE121/http://techtree.iiitd.edu.in/
+3. Visiting: /~CSE121/https://iiitd.ac.in/
+4. Visiting: /~CSE121/http://techtree.iiitd.edu.in/techtree
+5. Visiting: /~CSE121/https://iiitd.ac.in/academics/resources
+6. Visiting: /~CSE121/http://techtree.iiitd.edu.in/contact
+7. Visiting: /~CSE121/http://techtree.iiitd.edu.in/credits
+
+Index built.
+----------------------------------------------------------------------
+Would you like to see info about the pages crawled? (y/n) y
+
+Pages crawled: 1
+Pages indexed: 43
+Visited URLs: 7
+
+Outgoing URLs: 
+  +  http://techtree.iiitd.edu.in/
+  +  https://iiitd.ac.in/
+  +  http://techtree.iiitd.edu.in/techtree
+  +  https://iiitd.ac.in/academics/resources
+  +  http://techtree.iiitd.edu.in/contact
+  +  http://techtree.iiitd.edu.in/credits
+
+Broken URLs: 
+  +  mailto:fmoore@smu.edu
+  +  mailto:fmoore@lyle.smu.edu
+  +  http://lyle.smu.edu/~fmoore/syl_5330.pdf
+  +  http://lyle.smu.edu/~fmoore/syl_7330.pdf
+  +  http://lyle.smu.edu/~fmoore/does_not_exist.htm
+  +  http://lyle.smu.edu/~fmoore/misc/count_letters.txt
+  +  http://lyle.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+  +  http://lyle.smu.edu/~fmoore/this_aint_gonna_work.htm
+  +  http://lyle.smu.edu/~fmoore/\r\n
+
+Graphic URLs: 
+  +  https://docs.google.com/spreadsheets/u/0/?tgif=d
+  +  https://drive.google.com/u/0/abuse?id=AKkXjow8hZbk2Tvow5qtDJtMwizxO6mIPhywgDGnKRXXuhnkJUYov5KCVJU8516gBATJuKcEguAFWV-a3VOPeFw:0
+
+
+Duplicate URLs:
+	
+
+----------------------------------------------------------------------
+Building Term Frequency matrix... Done.
+
+
+Complete frequency matrix has been exported to Output/tf_matrix.csv
+----------------------------------------------------------------------
+
+Would you like to see the most frequent terms? (y/n) y
+----------------------------------------------------------------------
+Most Common Stemmed Terms:
+
+Term                       Term Frequency        Document Frequency
+----                       --------------        ------------------
+1. and                                10                        1
+2. Students                           12                        1
+
+----------------------------------------------------------------------
+
+Beginning clustering...
+
+Documents clustered. Would you like to see their clustering? (y/n) n
+----------------------------------------------------------------------
+
+
+
+Would you like to export this index to disk? (y/n) y
+Exported to Output/exported_index.obj.
+
+----------------------------------------------------------------------
+|    IIITD Search Engine                                            |
+|                                                                    |
+|    [0] Exit                                                        |
+|    [1] Build Index                                                 |
+|    [2] Search Documents                                            |
+----------------------------------------------------------------------
+Please select an option: 2
+----------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------
+
+Please enter a query or "stop": Students
+----------------------------------------------------------------------
+1.	http://techtree.iiitd.edu.in/viewDescription/filename?=CSE121
+
+	"Students are able to read, interpret and write some basic mathematical notations."
+
+
+2.	http://techtree.iiitd.edu.in/viewDescription/filename?=CSE121
+
+	"Students are able to recognize and to construct examples of mathematical objects introduced during the course such as the sets and functions."
+
+
+3.	http://techtree.iiitd.edu.in/viewDescription/filename?=CSE121
+
+	"Students are able to develop several matematical models."
+
+----------------------------------------------------------------------
+
+Please enter a query or "stop": stop
+
+Goodbye!
